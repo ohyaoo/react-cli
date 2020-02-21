@@ -1,0 +1,39 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["babel", "react"],
+    // "extends": ["standard", "standard-react"],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "mocha": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "camelcase": 0,
+        "no-debugger": 0,
+        "prefer-const": 2,
+        "space-before-function-paren": [
+            2,
+            {
+                "anonymous": "always",
+                "named": "never"
+            }
+        ],
+        "jsx-quotes": [2, "prefer-double"],
+        "react/prop-types": 0
+    }
+}
