@@ -1,5 +1,5 @@
 export { default as Base } from './Base'
 export { default as ComponentBase } from './ComponentBase'
 export { default as ContainerBase } from './ContainerBase'
-export { default as ModuleBase } from './ModuleBase'
+export { default as PageBase } from './PageBase'
 export { default as LayoutBase } from './LayoutBase'

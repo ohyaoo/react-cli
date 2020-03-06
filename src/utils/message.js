@@ -1,7 +1,7 @@
 import { Toast } from 'antd-mobile'
 
 class Message {
-  showMessage ({ type, msg }) {
+  showMessage({ type, msg }) {
     Toast[type || 'info'](msg)
   }
 }

@@ -4,7 +4,7 @@ import { LocaleProvider } from 'antd-mobile'
 import enUS from 'antd-mobile/lib/locale-provider/en_US'
 import { getLocale } from '~/utils/common'
 const localesProject = require('./modules')
-const localesFish = require('./modules/fish')
+const localesAntd = require('./modules/antd')
 const localesReactIntl = require('./modules/react-intl')
 
 Object.values(localesReactIntl).map(localesReactIntlItem =>
@@ -23,7 +23,7 @@ export default class Intl extends React.Component {
       case 'zh-CN':
         return {}
       default:
-        return localesFish[locale]
+        return localesAntd[locale]
     }
   }
 

@@ -3,6 +3,6 @@ export const COMPONENT_TYPE = {
   BASE: 'Base',
   COMPONENT: 'Component',
   CONTAINER: 'Container',
-  MODULE: 'Module',
+  PAGE: 'Page',
   LAYOUT: 'Layout'
 }

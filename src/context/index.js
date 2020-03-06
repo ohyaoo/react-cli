@@ -1,5 +1,6 @@
 import React from 'react'
 
-export const ShowContext = React.createContext({
-  getData: () => { }
+export const ContextHome = React.createContext({
+  getComments: () => { },
+  postComment: () => { }
 })

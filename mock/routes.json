@@ -1,3 +1,8 @@
 {
-    "/api/v0.1/data": "/data"
+    "/api/v0.1/article/:article_id": "/articles/:article_id?_expand=user",
+    "/api/v0.1/article/:article_id/comments\\?_limit=:limit&_start=:start": "/comments?articleId=:article_id&_expand=user&_sort=create_date&_order=desc&_limit=:limit&_start=:start",
+    "/api/v0.1/article/:article_id/comment": "/comments?articleId=:article_id",
+    "/api/v0.1/comment/:comment_id": "/comments/:comment_id?_expand=user",
+    "/api/v0.1/user/:user_id": "/users/:user_id",
+    "/api/v0.1/user/:user_id/articles": "/articles?userId=:user_id&_expand=user"
 }

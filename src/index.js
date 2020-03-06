@@ -1,4 +1,4 @@
-import 'babel-polyfill'
+import '@babel/polyfill'
 import './polyfills'
 import '~/theme/styles/app.scss'
 // 使用babel-plugin-transform-runtime不能完全代替babel-polyfill

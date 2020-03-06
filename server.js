@@ -29,7 +29,9 @@ app.use(require('webpack-hot-middleware')(compiler))
 
 if (process.argv.join(' ').indexOf(' --mock') > 0) {
   const jsonServer = require('json-server')
-  const router = jsonServer.router('./mock/db.json')
+  // 动态数据
+  const createData = require('./mock/db.js')
+  const router = jsonServer.router(createData())
   const middlewares = jsonServer.defaults()
   const rewriter = jsonServer.rewriter(rewriteJson)
   app.use(middlewares)
