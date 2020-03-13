@@ -24,7 +24,39 @@ const postComment = (article_id, data) => {
   })
 }
 
+// 修改数据
+const patchComment = (comment_id, content) => {
+  return axios.patch(`http://localhost:8080/api/v0.1/comment/${comment_id}`, {
+    content: content
+  })
+    .then(body => {
+      const { data, headers } = body
+      return data
+    })
+}
+
+const putComment = (comment_id, content) => {
+  return axios.put(`http://localhost:8080/api/v0.1/comment/${comment_id}`, {
+    content: content
+  })
+    .then(body => {
+      const { data, headers } = body
+      return data
+    })
+}
+
+const deleteComment = (comment_id) => {
+  return axios.delete(`http://localhost:8080/api/v0.1/comment/${comment_id}`)
+    .then(body => {
+      const { data, headers } = body
+      return data
+    })
+}
+
 export default {
   getComments,
-  postComment
+  postComment,
+  patchComment,
+  putComment,
+  deleteComment
 }

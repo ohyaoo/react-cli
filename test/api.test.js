@@ -1,36 +1,40 @@
-import { getComments, postComment } from '../src/apis/data/index'
+import { getComments, postComment, patchComment, deleteComment, putComment } from '../src/apis/data/index'
 
-describe('测试 getComments', () => {
-    test('返回结构测试', async () => {
+describe('获取', () => {
+    test('getComments', async () => {
         const comments = await getComments(1, 0, 10)
         expect(comments).toHaveProperty('items')
         expect(comments).toHaveProperty('count')
     })
 })
 
-describe('测试 postComment', () => {
-    test('返回结构测试', async () => {
+describe('新增', () => {
+    test('postComment', async () => {
         const comment = await postComment(1, {
+            id: 2,
             content: '测试测试',
             userId: 7,
             articleId: 1,
         })
         expect(comment).toHaveProperty('content')
-        expect(comment).toHaveProperty('userId')
-        expect(comment).toHaveProperty('articleId')
-        expect(comment).toHaveProperty('create_date')
-        expect(comment).toHaveProperty('id')
+    })
+})
+
+describe('修改', () => {
+    test('patchComment', async () => {
+        const comment = await patchComment(1, '测试1')
+        expect(comment.content).toBe('测试1')
     })
 
-    test('数量测试', async () => {
-        let { count: old_count } = await getComments(1, 0, 10)
-        const comment = await postComment(1, {
-            content: '测试测试',
-            userId: 7,
-            articleId: 1,
-        })
-        const { count } = await getComments(1, 0, 10)
-        old_count++
-        expect(old_count).toEqual(count)
+    test('putComment', async () => {
+        const comment = await putComment(1, '只剩一个')
+        expect(comment.content).toBe('只剩一个')
+    })
+})
+
+describe('删除', () => {
+    test('deleteComment', async () => {
+        const comment = await deleteComment(2)
+        expect(comment).toStrictEqual({})
     })
 })
