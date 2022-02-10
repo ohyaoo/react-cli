@@ -96,7 +96,7 @@
     "less-vars-to-js": "^1.2.1",
     "minimist": "^1.2.0",
     "mockjs": "^1.1.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "open": "^7.0.3",
     "postcss-assets": "^4.1.0",
     "postcss-browser-reporter": "^0.5.0",
