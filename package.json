@@ -94,7 +94,7 @@
     "less-loader": "^4.0.5",
     "less-plugin-clean-css": "^1.5.1",
     "less-vars-to-js": "^1.2.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "mockjs": "^1.1.0",
     "node-sass": "^4.5.3",
     "open": "^7.0.3",
